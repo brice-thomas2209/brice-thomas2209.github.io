@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/audio-mesh/static/css/main.c1e37cfb.css",
+    "main.js": "/audio-mesh/static/js/main.555a6cc2.js",
+    "static/js/753.ebe7a329.chunk.js": "/audio-mesh/static/js/753.ebe7a329.chunk.js",
+    "static/js/529.b8f866c2.chunk.js": "/audio-mesh/static/js/529.b8f866c2.chunk.js",
+    "index.html": "/audio-mesh/index.html",
+    "main.c1e37cfb.css.map": "/audio-mesh/static/css/main.c1e37cfb.css.map",
+    "main.555a6cc2.js.map": "/audio-mesh/static/js/main.555a6cc2.js.map",
+    "753.ebe7a329.chunk.js.map": "/audio-mesh/static/js/753.ebe7a329.chunk.js.map",
+    "529.b8f866c2.chunk.js.map": "/audio-mesh/static/js/529.b8f866c2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1e37cfb.css",
+    "static/js/main.555a6cc2.js"
+  ]
+}
