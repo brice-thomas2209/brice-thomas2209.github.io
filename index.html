@@ -1,18 +1,156 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="./favicon.ico">
+    <title>Brice Thomas</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Brice Thomas</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
-  <link rel="manifest" href="site.webmanifest">
-</head>
+	<nav id="header" class="fixed w-full z-10 top-0">
 
-<body>
-  <h1>Hello world</h1>
+		<div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #000000 var(--scroll), transparent 0);"></div>
+
+		<div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+
+			<div class="pl-4">
+				<a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="#">
+					Brice Thomas
+				</a>
+			</div>
+
+			<div class="block lg:hidden pr-4">
+				<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none">
+					<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+						<title>Menu</title>
+						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+					</svg>
+				</button>
+			</div>
+
+			<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20" id="nav-content">
+				<ul class="list-reset lg:flex justify-end flex-1 items-center">
+					<li class="mr-3">
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:underline py-2 px-4 menu-link" href="#terrain-editor">Terrain editor</a>
+					</li>
+					<!-- <li class="mr-3">
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:underline py-2 px-4 menu-link" href="#terrain-editor">link</a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!--Container-->
+	<div class="container w-full md:max-w-3xl mx-auto pt-20">
+
+		<div class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
+
+			<!--Title-->
+			<div class="font-sans">
+          <h1 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">Welcome to my portfolio</h1>
+          <p class="text-sm md:text-base font-normal text-gray-600">Updated 25 April 2022</p>
+			</div>
+
+			<!--Lead Para-->
+			<p class="py-6 font-sans">
+				👋 Welcome, I am Brice, a software engineer who is passionate about technology.
+			</p>
+
+      <h3 id="terrain-editor" class="py-2 font-sans text-gray-900 font-bold text-xl">Terrain editor</h3>
+      <p class="py-2 font-sans">Click on the page to add or remove terrain. Use the gui on the top right to change the colour of the terrain.</p>
+      <a href="./terrain-editor" class="font-sans text-gray-900 font-bold text-sm no-underline hover:underline cursor-pointer">View project -></a>
+			
+      
+			<!-- <blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">Example of blockquote - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.</blockquote> -->
+
+			<!-- 
+      <p class="py-6">Example code block:</p>
+			<pre class="bg-gray-900 rounded text-white font-mono text-base p-2 md:p-4">
+				<code class="break-words whitespace-pre-wrap">
+&lt;header class="site-header outer"&gt;
+&lt;div class="inner"&gt;
+{{&gt; "site-nav"}}
+&lt;/div&gt;
+&lt;/header&gt;
+				</code>
+			</pre>
+      -->
+
+		</div>
+
+	</div>
+	<!--/container-->
+
+	<script>
+		/* Progress bar */
+		//Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+		var h = document.documentElement,
+			b = document.body,
+			st = 'scrollTop',
+			sh = 'scrollHeight',
+			progress = document.querySelector('#progress'),
+			scroll;
+		var scrollpos = window.scrollY;
+		var header = document.getElementById("header");
+		var navcontent = document.getElementById("nav-content");
+
+		document.addEventListener('scroll', function() {
+
+			/*Refresh scroll % width*/
+			scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+			progress.style.setProperty('--scroll', scroll + '%');
+
+			/*Apply classes for slide in bar*/
+			scrollpos = window.scrollY;
+
+			if (scrollpos > 10) {
+				header.classList.add("bg-white");
+				header.classList.add("shadow");
+				navcontent.classList.remove("bg-gray-100");
+				navcontent.classList.add("bg-white");
+			} else {
+				header.classList.remove("bg-white");
+				header.classList.remove("shadow");
+				navcontent.classList.remove("bg-white");
+				navcontent.classList.add("bg-gray-100");
+
+			}
+
+		});
+
+    
+    // scroll href
+    Array.from(document.querySelectorAll('.menu-link')).forEach(function(menuLink) {
+      menuLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        const link = event.target.getAttribute('href');
+        const element = document.querySelector(link);
+        const topPos = element.getBoundingClientRect().top + window.pageYOffset - 70;
+        window.scrollTo({
+          top: topPos, // scroll so that the element is at the top of the view
+          behavior: 'smooth' // smooth scroll
+        })
+        Array.from(document.querySelectorAll('.menu-link')).forEach(function(el) {
+          el.classList.remove('font-bold');
+        });
+        event.target.classList.add('font-bold');
+      });
+    });
+
+		//Javascript to toggle the menu
+		document.getElementById('nav-toggle').onclick = function() {
+			document.getElementById("nav-content").classList.toggle("hidden");
+		}
+	</script>
 
 </body>
 

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/terrain-editor/static/css/main.b29df5be.css",
+    "main.js": "/terrain-editor/static/js/main.ecec3ef4.js",
+    "static/js/753.ebe7a329.chunk.js": "/terrain-editor/static/js/753.ebe7a329.chunk.js",
+    "static/js/529.b8f866c2.chunk.js": "/terrain-editor/static/js/529.b8f866c2.chunk.js",
+    "index.html": "/terrain-editor/index.html",
+    "main.b29df5be.css.map": "/terrain-editor/static/css/main.b29df5be.css.map",
+    "main.ecec3ef4.js.map": "/terrain-editor/static/js/main.ecec3ef4.js.map",
+    "753.ebe7a329.chunk.js.map": "/terrain-editor/static/js/753.ebe7a329.chunk.js.map",
+    "529.b8f866c2.chunk.js.map": "/terrain-editor/static/js/529.b8f866c2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b29df5be.css",
+    "static/js/main.ecec3ef4.js"
+  ]
+}
